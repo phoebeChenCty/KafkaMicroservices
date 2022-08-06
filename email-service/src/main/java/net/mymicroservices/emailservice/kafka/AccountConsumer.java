@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 public class AccountConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountConsumer.class);
 
-    @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
+    @KafkaListener(topics = "${spring.kafka.topic.name1}", groupId = "${spring.kafka.consumer.group-id}")
     public void consumer(AccountEvent event) {
         LOGGER.info(String.format("Account event recevied in email service => %s", event.toString()));
         // send email to customer

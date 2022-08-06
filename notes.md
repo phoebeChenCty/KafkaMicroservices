@@ -54,7 +54,7 @@ save entity to database \
 ### make store-service as Kafka consumer
     add dependency to base-domins
     config application.properties
-    create Account.Consumer.java
+    create AccountConsumer.java
 
 ## create REST api
 1. RegisterController.java
