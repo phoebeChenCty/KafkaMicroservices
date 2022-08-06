@@ -33,5 +33,13 @@ https://kafka.apache.org/quickstart \
 3. use Spring Initialz or https://start.spring.io/ to create spring app
     dependence: lomba, web, kafka, (Mysql, JPA)
 
-## config 5 spring app
+### config app
 1. set server.port in application.properties
+
+### create DTO class and event
+1. payload: info transfer by REST api \
+payload can be in Json format \
+spring transfer Json payload to DTO \
+business layer transfer DTO to entity \
+save entity to database \
+create AccountEvent to send Account(DTO) to Kafka
