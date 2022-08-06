@@ -8,7 +8,7 @@ https://www.youtube.com/playlist?list=PLGRDMO4rOGcOlnu6QhogZDNFFwiwKh5X9
 ### install Kafka
 https://kafka.apache.org/quickstart \
 1. download .tgz file from website. extract
-2. cmd in Kafka folder, start ZoonKeeper server
+2. cmd in Kafka folder, start ZooKeeper server
     .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties 
     (ctrl-c twice to exit)
 3. new cmd in Kafka folder, start Kafka server, port: 9092
@@ -42,4 +42,10 @@ payload can be in Json format \
 spring transfer Json payload to DTO \
 business layer transfer DTO to entity \
 save entity to database \
-create AccountEvent to send Account(DTO) to Kafka
+create AccountEvent to send Account(DTO) to Kafka, AccountEvent is payload
+
+### register-service as Kafka producer
+    open zookeeper and kafka server
+    config application.properties
+    create KafkaTopicConfig.java
+    create AccountProducer.java
