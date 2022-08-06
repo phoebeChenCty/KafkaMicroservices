@@ -28,4 +28,7 @@ https://kafka.apache.org/quickstart \
 
 ## create 4 microservices
 ### create spring app in vscode
+install Maven: https://phoenixnap.com/kb/install-maven-windows
 install spring boot app dev extension pack
+use Spring Initialz or https://start.spring.io/ to create spring app
+    dependence: lomba, web, kafka, Mysql, JPA
