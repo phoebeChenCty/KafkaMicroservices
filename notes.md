@@ -1,2 +1,31 @@
-##
-create kafka microservice with spring boot, MySQL
+## Goal
+create a web scraper which can personalize keywords by kafka microservices with spring boot, MySQL
+dockerize and deploy on aws
+
+## kafka microservices
+https://www.youtube.com/playlist?list=PLGRDMO4rOGcOlnu6QhogZDNFFwiwKh5X9
+
+### install Kafka
+https://kafka.apache.org/quickstart \
+1. download .tgz file from website. extract
+2. cmd in Kafka folder, start ZoonKeeper server
+    .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties 
+    (ctrl-c twice to exit)
+3. new cmd in Kafka folder, start Kafka server, port: 9092
+    .\bin\windows\kafka-server-start.bat .\config\server.properties
+    (ctrl-c twice to exit)
+4. new cmd in Kafka folder, create topic
+    .\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+5. write event into topic
+    .\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+    >hello world
+    >topic example 
+    (ctrl-c to exit)
+6. read event (similar to comsumer)
+    .\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+    hello world
+    topic example
+
+## create 4 microservices
+### create spring app in vscode
+install spring boot app dev extension pack
