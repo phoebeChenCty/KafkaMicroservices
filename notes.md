@@ -42,10 +42,16 @@ payload can be in Json format \
 spring transfer Json payload to DTO \
 business layer transfer DTO to entity \
 save entity to database \
-create AccountEvent to send Account(DTO) to Kafka, AccountEvent is payload
+2. create AccountEvent to send Account(DTO) to Kafka, AccountEvent is payload, send AccountEvent to Kafka
 
 ### register-service as Kafka producer
     open zookeeper and kafka server
     config application.properties
     create KafkaTopicConfig.java
-    create AccountProducer.java
+    create RegisterProducer.java
+
+## create REST api
+1. RegisterController.java
+2. use py_client in DRFApi project to send request
+3. use cmd in Kafka folder to read
+    .\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
