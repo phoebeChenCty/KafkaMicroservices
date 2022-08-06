@@ -44,14 +44,21 @@ business layer transfer DTO to entity \
 save entity to database \
 2. create AccountEvent to send Account(DTO) to Kafka, AccountEvent is payload, send AccountEvent to Kafka
 
-### register-service as Kafka producer
+### make register-service as Kafka producer
     open zookeeper and kafka server
     config application.properties
+    add dependency to base-domins
     create KafkaTopicConfig.java
-    create RegisterProducer.java
+    create AccountProducer.java
+
+### make store-service as Kafka consumer
+    add dependency to base-domins
+    config application.properties
+    create Account.Consumer.java
 
 ## create REST api
 1. RegisterController.java
 2. use py_client in DRFApi project to send request
 3. use cmd in Kafka folder to read
     .\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+

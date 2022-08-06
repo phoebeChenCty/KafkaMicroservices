@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.mymicroservices.registerservice.kafka.RegisterProducer;
+import net.mymicroservices.registerservice.kafka.AccountProducer;
 import net.mymicroservices.basedomains.dto.Account;
 import net.mymicroservices.basedomains.dto.AccountEvent;
 
 @RestController
 @RequestMapping("/register")
 public class RegisterController {
-    private RegisterProducer registerProducer;
+    private AccountProducer accountProducer;
 
-    public RegisterController(RegisterProducer registerProducer) {
-        this.registerProducer = registerProducer;
+    public RegisterController(AccountProducer accountProducer) {
+        this.accountProducer = accountProducer;
     }
 
     @PostMapping("/newuser")
@@ -28,7 +28,7 @@ public class RegisterController {
         accountEvent.setMessage("account status is in pending");
         accountEvent.setAccount(account);
 
-        registerProducer.sendMessage(accountEvent);
+        accountProducer.sendMessage(accountEvent);
 
         return "Account created";
     }

@@ -11,12 +11,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Service
-public class RegisterProducer {
-    private static final Logger LOGGER = LoggerFactory.getLogger(RegisterProducer.class);
+public class AccountProducer {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccountProducer.class);
     private NewTopic topic;
     private KafkaTemplate<String, AccountEvent> kafkaTemplate;
 
-    public RegisterProducer(NewTopic topic, KafkaTemplate<String, AccountEvent> kafkaTemplate) {
+    public AccountProducer(NewTopic topic, KafkaTemplate<String, AccountEvent> kafkaTemplate) {
         this.topic = topic;
         this.kafkaTemplate = kafkaTemplate;
     }
