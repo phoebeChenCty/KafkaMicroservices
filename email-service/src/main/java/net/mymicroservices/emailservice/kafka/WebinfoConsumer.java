@@ -14,7 +14,8 @@ public class WebinfoConsumer {
     @KafkaListener(topics = "${spring.kafka.topic.name2}", groupId = "${spring.kafka.consumer.group-id}")
     public void consumer(WebinfoEvent event) {
         LOGGER.info(String.format("webinfo event recevied in email service=> %s", event.toString()));
-        // save to database
+        // send email to customer
+
     }
 
 }
