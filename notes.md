@@ -87,5 +87,12 @@ save entity to database \
     create repository/WebinfoDataRepository.java
     save data to database in WebinfoConsumer.java
 
-### get data that satisfied some condition
+## TODO
+### email-service: get data that satisfied some conditions
     https://www.baeldung.com/rest-api-search-language-spring-data-specifications
+### email-service: send email
+### scraper-service: 
+    do scraper in java or (do scraper in python then use rest api sending to java)
+    filter keyword by read self database
+    send webinfo to kafka
+    scraping every 5 min
