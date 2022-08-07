@@ -69,3 +69,20 @@ save entity to database \
 3. use cmd in Kafka folder to read
     .\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
 
+## Connect to MySQL
+1. download MySQL: 
+    https://stackoverflow.com/questions/58475513/installing-mysql-in-d-drive-instead-of-c
+    https://www.udemy.com/course/devops-tools-and-aws-for-java-microservice-developers/learn/lecture/19534936#overview
+    Windows Service Name: MySQL80
+    root password: 123456
+    user name: root
+2. use MYSQL extension by Weijian Chen
+3. create database for each microservice. i.e store
+4. config Spring to connect to MySQL
+    https://www.youtube.com/watch?v=gJX74FltGeY&list=PLGRDMO4rOGcNLwoack4ZiTyewUcF6y6BU&index=23
+    1. add dependence: Mysql, jpa
+    2. config application.properties
+5. store data to database
+    create entity/webinfoData.java
+    create repository/WebinfoDataRepository.java
+    save data to database in WebinfoConsumer.java
