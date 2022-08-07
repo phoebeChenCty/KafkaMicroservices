@@ -27,6 +27,13 @@ https://kafka.apache.org/quickstart \
     topic example
 
 ## create 5 microservices
+register (email_address, keywords, send by REST api) -> account_topic -> scraper -> add to database (keyword) \
+register -> account_topic -> email -> add to database (keyword: email list) \
+scraper (web info, generate every 5 min) -> webinfo_topic -> email -> send emails \
+scraper -> webinfo_topic -> store -> add to database (time, web, info) \
+
+
+
 ### create spring app in vscode
 1. install Maven: https://phoenixnap.com/kb/install-maven-windows
 2. install spring boot app dev extension pack
