@@ -86,3 +86,6 @@ save entity to database \
     create entity/webinfoData.java
     create repository/WebinfoDataRepository.java
     save data to database in WebinfoConsumer.java
+
+### get data that satisfied some condition
+    https://www.baeldung.com/rest-api-search-language-spring-data-specifications

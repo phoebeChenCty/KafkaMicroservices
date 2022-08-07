@@ -22,4 +22,9 @@ public class KeywordEmailData {
     private String Keyword;
     @Lob
     private String email;
+
+    @Override
+    public String toString() {
+        return "{" + Keyword + ": " + email + "}";
+    }
 }
